@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,13 +12,9 @@ return new class extends Migration
     {
         Schema::create('user', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->string('user_name');
-            $table->integer('password');
+            $table->string('name');
             $table->string('email');
-            $table->integer('phon');
-            $table->string('role');
+            $table->integer('password');
             $table->timestamps();
         });
     }

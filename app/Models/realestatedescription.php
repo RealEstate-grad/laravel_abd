@@ -12,7 +12,7 @@ class realestatedescription extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $table = 'realestate_description';
+    protected $table = "realestate_description";
     // a realestate_description belongs to a realestate
     public function realestate(): HasOne
     {
